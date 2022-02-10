@@ -14,5 +14,8 @@ public class IndexController {
     public String index(){
         return "index";
     }
-
+    @GetMapping("/cart")
+    public String cart(){
+        return "cart";
+    }
 }
