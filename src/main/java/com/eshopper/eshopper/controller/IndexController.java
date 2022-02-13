@@ -18,4 +18,26 @@ public class IndexController {
     public String cart(){
         return "cart";
     }
+
+    @GetMapping("/checkout")
+    public String checkout(){
+        return "checkout";
+    }
+
+    @GetMapping("/blog")
+    public String blog(){
+        return "blog";
+    }
+    @GetMapping("/blog-single")
+    public String blogSingle(){
+        return "blog-single";
+    }
+    @GetMapping("/contact-us")
+    public String contactUs(){
+        return "contact-us";
+    }
+    @GetMapping("/product-details")
+    public String productDetails(){
+        return "product-details";
+    }
 }
