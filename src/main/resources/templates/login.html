@@ -26,13 +26,15 @@
 			<div class="col-sm-4">
 				<div class="signup-form"><!--sign up form-->
 					<h2>New User Signup!</h2>
-					<form action="#">
-						<input type="text" placeholder="Name"/>
-						<input type="email" placeholder="Email Address"/>
-						<input type="password" placeholder="Password"/>
-<!--						<a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
-						<a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>-->
-						<button type="submit" class="btn btn-default">Signup</button>
+					<form th:object="${user}" th:action="/login/new" id="add-user-form" method="post">
+
+							<input type="text" placeholder="Name" id="name">
+							<input type="text" placeholder="Email Address" id="email">
+							<input type="text" placeholder="PhoneNumber" id="phoneNumber">
+	<!--						<a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+							<a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>-->
+							<button type="submit" class="btn btn-default">Signup</button>
+
 					</form>
 				</div><!--/sign up form-->
 			</div>
@@ -42,7 +44,6 @@
 
 
 <footer th:replace="layouts/footer :: footer"></footer>
-
 
 <script src="/js/jquery.js"></script>
 <script src="/js/price-range.js"></script>
