@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head th:replace="layouts/commonHead :: commonHead"></head>
 <body>
 <header th:replace="layouts/header :: header"></header>
@@ -26,14 +26,14 @@
 			<div class="col-sm-4">
 				<div class="signup-form"><!--sign up form-->
 					<h2>New User Signup!</h2>
-					<form th:object="${user}" th:action="/login/new" id="add-user-form" method="post">
+					<form th:object="${user}" id="add-user-form" method="post">
 
-							<input type="text" placeholder="Name" id="name">
-							<input type="text" placeholder="Email Address" id="email">
-							<input type="text" placeholder="PhoneNumber" id="phoneNumber">
+							<input type="text"  placeholder="Name" id="name">
+							<input type="email" placeholder="Email Address" id="email">
+							<input type="number" placeholder="PhoneNumber" id="phoneNumber">
 	<!--						<a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
 							<a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>-->
-							<button type="submit" class="btn btn-default">Signup</button>
+							<button type="submit" class="btn btn-default" th:text="${text}">Signup</button>
 
 					</form>
 				</div><!--/sign up form-->
